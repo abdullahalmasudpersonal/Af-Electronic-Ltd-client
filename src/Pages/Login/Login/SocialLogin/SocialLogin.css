@@ -1,0 +1,10 @@
+.socialLogin{
+    display: flex;
+    justify-content: center;
+}
+.socialLogin img{
+    margin: 0 20px;
+}
+.socialLogin img:hover{
+    cursor: pointer;    
+}
