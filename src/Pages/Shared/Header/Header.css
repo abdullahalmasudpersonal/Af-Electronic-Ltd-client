@@ -1,8 +1,8 @@
 .header {
     width: 100%;
     background-color: #690bffa4;
-    border-radius: 0 0 4px 4px;
     padding:  0 150px;
+    font-weight: bold;
 }
 @media screen and (max-width:580px) {
     .header {

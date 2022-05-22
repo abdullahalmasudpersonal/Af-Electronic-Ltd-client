@@ -1,0 +1,25 @@
+.blogs{
+    padding: 50px;
+    background-color: rgb(233, 216, 253);
+}
+.blogs > div{
+    margin-bottom: 20px;
+}
+.bgblogcolor{
+    background-color: rgb(198, 173, 255);
+    color: rgb(24, 4, 44);
+}
+.bg2blogcolor{
+    background-color: rgba(232, 192, 255, 0.856);
+    color: rgb(24, 4, 44);
+}
+.blogs span{
+    color: rgb(36, 2, 158);
+    font-weight: bold;
+}
+
+@media screen and (max-width:580px) {
+    .blogs{
+        padding: 15px;
+    }
+}
