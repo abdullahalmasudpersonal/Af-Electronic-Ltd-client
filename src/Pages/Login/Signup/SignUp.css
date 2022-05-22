@@ -1,0 +1,63 @@
+.signup{
+    height: 800px;
+    /* background-image: linear-gradient(rgb(226, 165, 124),rgb(230, 151, 106), rgb(196, 97, 17)); */
+    background-image: url('https://pbs.twimg.com/media/ExlOlZ_WgAQne9k.jpg:large');
+   background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-dev{
+    height: 650px;
+    width: 350px;
+    border: 1px solid none;
+    border-radius: 4px;
+    background-color: rgba(161, 46, 255, 0.842);
+    /* box-shadow: 20px 20px 20px 10px rgba(121, 0, 202, 0.884);  */
+    box-shadow: rgba(179, 46, 240, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.signup-hd{
+    text-align: center;
+    color: rgb(255, 209, 148);
+    font-size: 30px;
+    margin: 15px auto;
+}
+.signup-form{
+    text-align: center;
+}
+.signup-input{
+    width: 250px;
+    height: 40px;
+    background:none;
+    border-radius: 4px;
+    border: 1px solid rgb(191, 95, 255);
+    margin: 9px 0;
+    font-size: 16px;
+    color: rgb(255, 244, 230);
+    font-weight: 600;
+}
+.input-submit:hover{
+    cursor: pointer;
+    color: rgb(253, 194, 122);
+    background: rgba(139, 0, 231, 0.712);
+    border: none;
+}
+.signup-or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-or hr{
+    width: 40%;
+}
+.new-user{
+    color: rgb(255, 224, 194);
+}
+.new-user span{
+    color: rgb(255, 194, 25);
+}
+.new-user span:hover{
+    cursor: pointer;
+    color: rgb(0, 15, 223);
+}

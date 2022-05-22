@@ -1,4 +1,16 @@
-.header{
-    height: 60px;
-    background-color: bisque;
+.header {
+    width: 100%;
+    background-color: #690bffa4;
+    border-radius: 0 0 4px 4px;
+    padding:  0 150px;
+}
+@media screen and (max-width:580px) {
+    .header {
+        padding:  0 10px;
+    }
+}
+@media screen and (max-width:880px) and (min-width:581px){
+    .header {
+        padding:  0 50px;
+    }
 }

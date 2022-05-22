@@ -1,7 +1,8 @@
 import React from 'react';
-import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
-import loginImg from '../../../../img/loginImg/istockphoto-108622864-612x612_1_-removebg-preview.png';
+import loginImg from '../../../img/loginImg/istockphoto-108622864-612x612_1_-removebg-preview.png';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -15,10 +16,9 @@ const Login = () => {
                 <h2 className='login-hd'>Login</h2>
 
                 <form className='login-form'>
-                    <input className='input' type='email' placeholder=' Email' required></input>
-                    <input className='input' type='password' placeholder=' Password' required></input>
-                    <input type='submit' className='input input-submit' value='Login' />
-
+                    <input className='login-input' type='email' placeholder=' Email' required></input>
+                    <input className='login-input' type='password' placeholder=' Password' required></input>
+                    <input type='submit' className='login-input input-submit' value='Login' />
                 </form>
 
                 <p className='forgot-btn'>Forgot Password</p>
@@ -31,8 +31,9 @@ const Login = () => {
                     <SocialLogin />
                 </div>
 
-                <div className='new-user'>
-                    <p style={{ textAlign: 'center' }}>New to Computer Warehouse? <span>Register</span>
+                <div className='user'>
+                    <p style={{ textAlign: 'center' }}>New to Af Electronics Ltd? <Link to='/signup' style={{ textDecoration: 'none' }}>
+                    <span>SignUp</span></Link>
                     </p>
                 </div>
             </div>

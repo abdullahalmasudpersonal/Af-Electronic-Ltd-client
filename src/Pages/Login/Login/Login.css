@@ -7,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .login-dev{
     height: 650px;
@@ -27,7 +26,7 @@
 .login-form{
     text-align: center;
 }
-.input{
+.login-input{
     width: 250px;
     height: 40px;
     background:none;
@@ -61,13 +60,13 @@
 .login-or hr{
     width: 40%;
 }
-.new-user{
+.user{
     color: rgb(255, 224, 194);
 }
-.new-user span{
+.user span{
     color: rgb(255, 194, 25);
 }
-.new-user span:hover{
+.user span:hover{
     cursor: pointer;
     color: rgb(0, 15, 223);
 }
