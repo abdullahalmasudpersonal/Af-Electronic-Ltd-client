@@ -1,0 +1,42 @@
+.summary-bg{
+    background-color: rgb(223, 220, 255);
+}
+.container-card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    padding: 50px;
+}
+h3{
+    color: rgb(68, 0, 255);
+    padding-top: 50px;
+}
+.business-item{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(212, 188, 250, 0.466);
+    color: rgb(162, 0, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: rgba(130, 46, 240, 0.4) -5px 5px, rgba(130, 46, 240, 0.3) -10px 10px, rgba(130, 46, 240, 0.2) -15px 15px, rgba(130, 46, 240, 0.1) -20px 20px, rgba(130, 46, 240, 0.05) -25px 25px;
+}
+.business-item img{
+    margin: 5px auto;
+}
+
+@media screen and (max-width:600px) {
+    .container-card{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+}
+@media screen and (min-width:601px) and (max-width:900px){
+    .container-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
