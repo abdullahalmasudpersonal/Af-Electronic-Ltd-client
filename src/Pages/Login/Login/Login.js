@@ -4,10 +4,11 @@ import google from '../../../img/SocialLogin/google-logo3.png';
 import github from '../../../img/SocialLogin/github-icon.png';
 import facebook from '../../../img/SocialLogin/facebook.png';
 import loginImg from '../../../img/loginImg/istockphoto-108622864-612x612_1_-removebg-preview.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
+import Loading from '../../Shared/Loading/Loading';
 
 
 const Login = () => {
@@ -18,14 +19,26 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
-    if (gUser) {
-        console.log(gUser)
+    let signInError;
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || '/';
+
+    if (loading || gLoading) {
+        return <Loading />
+    }
+    if (error || gError) {
+        signInError = <p className='text-red-500 mb-1 mt-0'><small>{error?.message || gError?.message}</small></p>
+    }
+
+    if (user || gUser) {
+        navigate(from, {replace: true});
     }
 
     const onSubmit = data => {
-        console.log(data);
+        signInWithEmailAndPassword(data.email, data.password);
     }
 
     return (
@@ -38,7 +51,7 @@ const Login = () => {
 
                 <form onSubmit={handleSubmit(onSubmit)} className='login-form'>
 
-                    <div className="">
+                    <div>
                         <input className='login-input' type='email'
                             placeholder=' Email' autoComplete="off"
                             {...register("email", {
@@ -73,11 +86,12 @@ const Login = () => {
                             })}
                         />
                         <label className='label ml-12'>
-                            {errors.password?.type === 'required' && <span className='text-red-500'>{errors.password.message}</span>}  
+                            {errors.password?.type === 'required' && <span className='text-red-500'>{errors.password.message}</span>}
                             {errors.password?.type === 'minLength' && <span className='text-red-500'>{errors.password.message}</span>}
                         </label>
                     </div>
 
+                    {signInError}
                     <input type='submit' className='login-input input-submit' value='Login' />
 
                 </form>

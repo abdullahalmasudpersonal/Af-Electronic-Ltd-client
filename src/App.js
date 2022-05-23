@@ -8,20 +8,23 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import Notfound from './Pages/Shared/Notfound/Notfound';
 import Blogs from './Pages/Blogs/Blogs';
+import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
 
 function App() {
   return (
     <div>
       <Header />
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/home' element={<Home/>} />
-        <Route path='/blogs' element={<Blogs/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/signup' element={<Signup/>} />
-        <Route path='/*' element={<Notfound/>}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/blogs' element={<RequireAuth>
+          <Blogs />
+        </RequireAuth>} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/*' element={<Notfound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
