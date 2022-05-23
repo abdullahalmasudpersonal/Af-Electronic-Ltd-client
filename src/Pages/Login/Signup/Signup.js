@@ -1,7 +1,9 @@
 import React from 'react';
 import './SignUp.css';
+import google from '../../../img/SocialLogin/google-logo3.png';
+import github from '../../../img/SocialLogin/github-icon.png';
+import facebook from '../../../img/SocialLogin/facebook.png';
 import loginImg from '../../../img/loginImg/istockphoto-108622864-612x612_1_-removebg-preview.png';
-import SocialLogin from '../SocialLogin/SocialLogin';
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
@@ -25,7 +27,15 @@ const Signup = () => {
                 </div>
 
                 <div>
-                    <SocialLogin />
+                <div>
+                    <div className='socialLogin'>
+                        <img height='40px' width='40px' src={github} alt='' />
+
+                        <img height='40px' width='40px' src={google} alt='' />
+
+                        <img height='40px' width='40px' src={facebook} alt='' />
+                    </div>
+                </div>
                 </div>
 
                 <div className='new-user mt-4'>
