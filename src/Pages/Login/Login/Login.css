@@ -9,7 +9,7 @@
     align-items: center;
 }
 .login-dev{
-    height: 650px;
+    height: 680px;
     width: 350px;
     border: 1px solid none;
     border-radius: 4px;
@@ -21,7 +21,7 @@
     text-align: center;
     color: antiquewhite;
     font-size: 30px;
-    margin: 15px auto;
+    margin: 0 auto 15px  auto;
 }
 .login-form{
     text-align: center;
@@ -64,9 +64,10 @@
     color: rgb(255, 224, 194);
 }
 .user span{
-    color: rgb(255, 194, 25);
+    color: rgb(55, 0, 255);
+    font-weight: bold;
 }
 .user span:hover{
     cursor: pointer;
-    color: rgb(0, 15, 223);
+    color: rgb(255, 115, 0);
 }
