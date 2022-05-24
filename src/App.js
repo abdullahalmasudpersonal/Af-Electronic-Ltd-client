@@ -11,6 +11,11 @@ import Blogs from './Pages/Blogs/Blogs';
 import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
 import Reviews from './Pages/Reviews/Reviews';
 import Products from './Pages/Products/Products';
+import Dashbord from './Pages/Dashbord/Dashbord';
+import MyProfile from './Pages/Dashbord/MyProfile';
+import AddReview from './Pages/Dashbord/AddReview';
+import MyOrders from './Pages/Dashbord/MyOrders';
+import AddPorduct from './Pages/Dashbord/AddPorduct';
 
 function App() {
   return (
@@ -19,10 +24,15 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
+        <Route path='/dashbord' element={<RequireAuth>
+          <Dashbord /> </RequireAuth>}>
+          <Route index element={<MyProfile />} />
+          <Route path='myorders' element={<MyOrders />} />
+          <Route path='addreview' element={<AddReview />} />
+          <Route path='addproduct' element={<AddPorduct />} />
+        </Route>
         <Route path='/products' element={<Products />} />
-        <Route path='/blogs' element={<RequireAuth>
-          <Blogs />
-        </RequireAuth>} />
+        <Route path='/blogs' element={<Blogs />} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
