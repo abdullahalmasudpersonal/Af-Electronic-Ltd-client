@@ -1,5 +1,4 @@
 import React from 'react';
-import tools from '../../img/Busniness Summary/tools.png';
 import './HomeReview.css';
 
 const HomeReview = ({ homeReview }) => {
