@@ -19,7 +19,7 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: auto auto 25px auto;
     border-radius: 4px;
     box-shadow: rgba(130, 46, 240, 0.4) -5px 5px, rgba(130, 46, 240, 0.3) -10px 10px, rgba(130, 46, 240, 0.2) -15px 15px, rgba(130, 46, 240, 0.1) -20px 20px, rgba(130, 46, 240, 0.05) -25px 25px;
 }
@@ -38,5 +38,11 @@ h3{
     .container-card{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width:901px) and (max-width:1300px){
+    .container-card{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }

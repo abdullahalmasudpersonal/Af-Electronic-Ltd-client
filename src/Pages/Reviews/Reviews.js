@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import HomeReview from '../Home/HomeReview';
+import './Reviews.css';
 
 const Reviews = () => {
+    const [homeReviews, setHomeReviews] = useState([]);
+
+    useEffect(() => {
+        fetch('reviews.json')
+            .then(res => res.json())
+            .then(data => setHomeReviews(data));
+    }, []);
     return (
-        <div>
-            <h3>Add Reviews</h3>
+        <div className='reviews'>
+            <h2 className='text-3xl text-center  '>Coustomer Reviews</h2>
+            <div className='reviews-map'>
+                {
+                    homeReviews.map(homeReview => <HomeReview
+                        key={homeReview._id}
+                        homeReview={homeReview}
+                    ></HomeReview>)
+                }
+            </div>
         </div>
     );
 };

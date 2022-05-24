@@ -16,6 +16,8 @@ import MyProfile from './Pages/Dashbord/MyProfile';
 import AddReview from './Pages/Dashbord/AddReview';
 import MyOrders from './Pages/Dashbord/MyOrders';
 import AddPorduct from './Pages/Dashbord/AddPorduct';
+import ManagePorduct from './Pages/Dashbord/ManagePorduct';
+import MakeAdmin from './Pages/Dashbord/MakeAdmin';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path='myorders' element={<MyOrders />} />
           <Route path='addreview' element={<AddReview />} />
           <Route path='addproduct' element={<AddPorduct />} />
+          <Route path='manageproduct' element={<ManagePorduct />} />
+          <Route path='makeadmin' element={<MakeAdmin />} />
         </Route>
         <Route path='/products' element={<Products />} />
         <Route path='/blogs' element={<Blogs />} />
