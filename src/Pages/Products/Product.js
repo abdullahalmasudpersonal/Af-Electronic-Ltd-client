@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Product.css';
 
 const Product = ({ homeProduct }) => {
-    const { name, img, dec, price, minOrder, available } = homeProduct;
+    const { _id, name, img, dec, price, minOrder, available } = homeProduct;
+    const navigate = useNavigate();
+
+    const navigateToProductDetail = id => {
+        navigate(`/product/${id}`);
+    }
 
     return (
         <div className='product'>
@@ -14,7 +20,7 @@ const Product = ({ homeProduct }) => {
                 <h2 className='font-bold text-blue-900'>Price: ${price} /Piece</h2>
                 <h2><span className='font-bold text-blue-900'>Description:</span> {dec}</h2>
 
-                <button className='font-bold'>Purchase</button>
+                <button onClick={() => navigateToProductDetail(_id)} className='font-bold'>Purchase</button>
             </div>
         </div>
     );

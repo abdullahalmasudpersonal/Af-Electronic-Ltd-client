@@ -18,6 +18,7 @@ import MyOrders from './Pages/Dashbord/MyOrders';
 import ManagePorduct from './Pages/Dashbord/ManagePorduct';
 import MakeAdmin from './Pages/Dashbord/MakeAdmin';
 import AddProduct from './Pages/Dashbord/AddProduct';
+import ProductDetail from './Pages/ProductDetail.js/ProductDetail';
 
 function App() {
   return (
@@ -36,7 +37,9 @@ function App() {
           <Route path='makeadmin' element={<MakeAdmin />} />
         </Route>
         <Route path='/products' element={<Products />} />
-        
+        <Route path='/product/:productId' element={<RequireAuth>
+          <ProductDetail />
+        </RequireAuth>} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/login' element={<Login />} />
