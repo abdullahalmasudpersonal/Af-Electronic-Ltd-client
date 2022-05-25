@@ -3,6 +3,7 @@ import './Product.css';
 
 const Product = ({ homeProduct }) => {
     const { name, img, dec, price, minOrder, available } = homeProduct;
+
     return (
         <div className='product'>
             <div className='product-dev'>
@@ -14,10 +15,9 @@ const Product = ({ homeProduct }) => {
                 <h2><span className='font-bold text-blue-900'>Description:</span> {dec}</h2>
 
                 <button className='font-bold'>Purchase</button>
-
             </div>
         </div>
     );
 };
 
-export default Product;;
+export default Product;

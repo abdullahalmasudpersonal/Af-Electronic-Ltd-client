@@ -36,6 +36,7 @@ function App() {
           <Route path='makeadmin' element={<MakeAdmin />} />
         </Route>
         <Route path='/products' element={<Products />} />
+        
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/login' element={<Login />} />
