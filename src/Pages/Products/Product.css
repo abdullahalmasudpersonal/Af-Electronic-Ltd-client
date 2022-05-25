@@ -1,0 +1,24 @@
+.product{
+    padding-bottom: 50px;
+}
+.product-dev{
+    width: 300px;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.product-dev img{
+    margin: auto;
+}
+.product-dev h2{
+    padding: 0 10px;
+}
+.product-dev button{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    background-color: rgb(215, 199, 255);
+}

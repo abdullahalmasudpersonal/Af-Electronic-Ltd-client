@@ -1,0 +1,25 @@
+.products h1{
+    padding: 60px;
+}
+.products-dev{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width:650px){
+    .products-dev{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+} 
+@media screen and (min-width:651px) and (max-width:1000px){
+    .products-dev{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
+@media screen and (min-width:1001px){
+    .products-dev{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+} 
