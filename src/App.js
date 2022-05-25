@@ -19,6 +19,7 @@ import ManagePorduct from './Pages/Dashbord/ManagePorduct';
 import MakeAdmin from './Pages/Dashbord/MakeAdmin';
 import AddProduct from './Pages/Dashbord/AddProduct';
 import ProductDetail from './Pages/ProductDetail.js/ProductDetail';
+import CheckOut from './Pages/CheckOut/CheckOut';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path='/product/:productId' element={<RequireAuth>
           <ProductDetail />
         </RequireAuth>} />
+        <Route path='/checkout' element={<CheckOut />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/login' element={<Login />} />
