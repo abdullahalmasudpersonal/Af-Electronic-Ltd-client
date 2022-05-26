@@ -31,6 +31,7 @@ const Header = () => {
                             <li><Link to='/products' >Products</Link></li>
                             <li><Link to='/reviews' >Reviews</Link></li>
                             <li><Link to='/blogs' >Blogs</Link></li>
+                            <li><Link to='/myportfolio' >My Portfolio</Link></li>
                             <li>{
                                 user ? <button className='font-bold' onClick={logout}>sign Out</button> : <Link to='/login'>Login</Link>
                             }</li>
@@ -48,6 +49,7 @@ const Header = () => {
                         <li><Link to='/products' >Products</Link></li>
                         <li><Link to='/reviews' >Reviews</Link></li>
                         <li><Link to='/blogs' >Blogs</Link></li>
+                        <li><Link to='/myportfolio' >My Portfolio</Link></li>
                     </ul>
                 </div>
 

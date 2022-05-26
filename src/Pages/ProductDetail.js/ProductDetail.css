@@ -1,0 +1,9 @@
+.productDetail{
+    height: 800px;
+    display: flex;
+    justify-content: center; 
+    padding-top: 70px;
+}
+.productDetail input{
+    width: 300px;
+}

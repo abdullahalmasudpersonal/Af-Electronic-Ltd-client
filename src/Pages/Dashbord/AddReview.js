@@ -30,7 +30,7 @@ const AddReview = () => {
 
                         <input type="number" name='ratting' placeholder="Enter ratting" class="input input-bordered input-md w-full max-w-xs mb-3" {...register("ratting", { min: 1, max: 5 })}   />
                         <br />
-                        <textarea type="text" name='review' placeholder="Type your review" class="input input-bordered input-md w-full max-w-xs mb-3"  {...register("dec")} />
+                        <textarea type="text" name='review' placeholder="Type your review" class="input input-bordered input-md w-full max-w-xs mb-3 h-20"  {...register("dec")} />
 
                         <input type="submit" value='submit' placeholder="Type here" class="input input-bordered input-md w-full max-w-xs font-bold cursor-pointer bg-purple-100 hover:bg-purple-400 " />
                     </form>

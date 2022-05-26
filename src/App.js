@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import React from 'react';
 import Home from './Pages/Home/Home';
@@ -20,6 +21,7 @@ import MakeAdmin from './Pages/Dashbord/MakeAdmin';
 import AddProduct from './Pages/Dashbord/AddProduct';
 import ProductDetail from './Pages/ProductDetail.js/ProductDetail';
 import CheckOut from './Pages/CheckOut/CheckOut';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 function App() {
   return (
@@ -44,11 +46,13 @@ function App() {
         <Route path='/checkout/:productId' element={<CheckOut />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/reviews' element={<Reviews />} />
+        <Route path='/myportfolio' element={<MyPortfolio />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/*' element={<Notfound />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

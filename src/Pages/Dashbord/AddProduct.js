@@ -34,7 +34,7 @@ const AddProduct = () => {
 
                     <input type="number" name='price' placeholder="Enter Price" class="input input-bordered input-md w-full max-w-xs mb-3" {...register("price")}   />
                     <br />
-                    <textarea type="text" name='dec' placeholder="Description" class="input input-bordered input-md w-full max-w-xs mb-3"  {...register("dec")} />
+                    <textarea type="text" name='dec' placeholder="Description" class="input input-bordered input-md w-full max-w-xs mb-3 h-20"  {...register("dec")} />
 
                     <input type="text" name='img' placeholder="Photo URL" class="input input-bordered input-md w-full max-w-xs mb-3"  {...register("img")} />
 

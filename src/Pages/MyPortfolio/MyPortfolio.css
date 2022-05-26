@@ -1,0 +1,12 @@
+.myportfolio{
+    height: 1000px;
+    padding: 100px;
+}
+.portfolio-table table{
+    margin: auto;
+}
+@media screen and (max-width:700px) {
+    .myportfolio{
+        padding: 10px;
+    }
+}
