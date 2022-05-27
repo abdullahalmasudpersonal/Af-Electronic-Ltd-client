@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import './App.css';
 import React from 'react';
 import Home from './Pages/Home/Home';
@@ -22,6 +21,8 @@ import AddProduct from './Pages/Dashbord/AddProduct';
 import ProductDetail from './Pages/ProductDetail.js/ProductDetail';
 import CheckOut from './Pages/CheckOut/CheckOut';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
