@@ -16,7 +16,7 @@ const MakeAdmin = () => {
 
     return (
         <div className='ml-6'>
-            <h2>Make Admin: {users.length}</h2>
+            <h2 className='mb-3'>Make Admin</h2>
             <table className="table ">
                 <thead>
                     <tr>

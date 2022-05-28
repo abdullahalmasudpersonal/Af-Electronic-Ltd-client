@@ -70,9 +70,16 @@ const MyPortfolio = () => {
                         <li>* TAILWINDCSS</li>
                         <li>* DAISYUI</li>
                         <li>* JAVASCRIPT</li>
+                        <li>* REACT TOASTIFY</li>
+                        <li>* REACT HOOK FROM</li>
                         <li>* REACT</li>
                         <li>* NODE.JS</li>
                         <li>* EXPRESS</li>
+                        <li>* AXIOS</li>
+                        <li>* JWT</li>
+                        <li>* MONGODB</li>
+                        <li>* REACT QUERY</li>
+                        <li>* REACT QUERY</li>
                     </ul>
                 </div>
 

@@ -1,6 +1,41 @@
 # AF ELECTRONICS LTD
 
-This project Live Link [AF ELECTRONICS LTD](https://github.com/facebook/create-react-app).
+This project Live Link [AF ELECTRONICS LTD](https://af-electronics-ltd.web.app).
+
+This project Live Link-2 [AF ELECTRONICS LTD](https://af-electronics-ltd.firebaseapp.com).
+
+### `Description:` 
+This is an electronics product Manufacturers website. Various types of electronics products are produced here. Different types of electronics products are produced here, and orders are taken from different parts of the world through websites. Products are made and delivered in the fastest time. Only wholesale is sold at a small profit.
+
+### Use Navber
+- HOME
+- DASHBORD [ USER- MY PROFILE, ADD REVIEW, MY ORDER] [ ADMIN- MY PORFILE, ADD PRODUCT, MANAGE-PORDUCT, MANAGE-ALL-ORDERS, MAKE-ADMIN ]
+- PRODUCT
+- REVIEW
+- BLOGS
+- MY PORTFOLIO
+- LOGIN
+
+## Use Technology
+
+#### Client Side
+ - Firebase 
+ - React Router
+ - Use Hooks
+ - Bootstrap
+ - React-Boostrap
+ - useRef
+ - Axios
+ - Reactfirebase hooks
+
+#### client Side
+ - Express
+ - Cors 
+ - Mongodb
+ - JsonWebToken
+ - Donenv
+ - Heroku
+ - 
 
 ## Available Scripts
 
