@@ -9,7 +9,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading/Loading';
-
+import useToken from '../../../Hooks/useToken';
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -20,6 +20,8 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+     
+    const [token] = useToken(user || gUser);
 
     let signInError;
     const navigate = useNavigate();
@@ -33,7 +35,7 @@ const Login = () => {
         signInError = <p className='text-red-500 mb-1 mt-0'><small>{error?.message || gError?.message}</small></p>
     }
 
-    if (user || gUser) {
+    if (token) {
         navigate(from, {replace: true});
     }
 
@@ -48,9 +50,7 @@ const Login = () => {
                     <img width='350px' height='180px' src={loginImg} alt='' />
                 </div>
                 <h2 className='login-hd'>Login</h2>
-
                 <form onSubmit={handleSubmit(onSubmit)} className='login-form'>
-
                     <div>
                         <input className='login-input' type='email'
                             placeholder=' Email' autoComplete="off"
@@ -90,19 +90,13 @@ const Login = () => {
                             {errors.password?.type === 'minLength' && <span className='text-red-500'>{errors.password.message}</span>}
                         </label>
                     </div>
-
                     {signInError}
                     <input type='submit' className='login-input input-submit' value='Login' />
-
                 </form>
-
-
                 <p className='forgot-btn'>Forgot Password</p>
-
                 <div className='login-or mb-2 mt-2'>
                     <hr /> <p className='ml-1 mr-1' style={{ color: 'blue' }}>OR</p> <hr />
                 </div>
-
                 <div>
                     <div className='socialLogin'>
                         <img height='40px' width='40px' src={github} alt='' />
@@ -114,7 +108,6 @@ const Login = () => {
                         <img height='40px' width='40px' src={facebook} alt='' />
                     </div>
                 </div>
-
                 <div className='user mt-4'>
                     <p style={{ textAlign: 'center' }}>New to Af Electronics Ltd? <Link to='/signup' style={{ textDecoration: 'none' }}>
                         <span>SignUp</span></Link>

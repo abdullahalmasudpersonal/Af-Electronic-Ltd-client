@@ -12,7 +12,6 @@ import Loading from '../../Shared/Loading/Loading';
 import useToken from '../../../Hooks/useToken';
 
 const Signup = () => {
-
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [
@@ -23,30 +22,24 @@ const Signup = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const [updateProfile, updating, updatError] = useUpdateProfile(auth);
-
     const [token] = useToken((gUser || user));
-
 
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
-
     let signInError;
-
     if (loading || gLoading || updating) {
         return <Loading />
     }
     if (error || gError || updating) {
         signInError = <p className='text-red-500 mb-1 mt-0'><small>{error?.message || gError?.message || updatError?.message}</small></p>
     }
-
 /*     if (gUser || user) {
         // navigate(from, {replace: true});
     } */
     if (token) {
          navigate(from, {replace: true});
     }
-
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
@@ -59,11 +52,7 @@ const Signup = () => {
                     <img width='350px' height='180px' src={loginImg} alt='' />
                 </div>
                 <h2 className='signup-hd'>SignUp</h2>
-
                 <form onSubmit={handleSubmit(onSubmit)} className='signup-form'>
-
-                    {/*  <input className='signup-input' type='text' placeholder=' Name' required></input> */}
-
                     <div>
                         <input className='signup-input' type='text'
                             placeholder=' Name' autoComplete="off"
@@ -78,7 +67,6 @@ const Signup = () => {
                             {errors.name?.type === 'required' && <span className='text-red-500'>{errors.name.message}</span>}
                         </label>
                     </div>
-
                     <div>
                         <input className='signup-input' type='email'
                             placeholder=' Email' autoComplete="off"
@@ -98,8 +86,6 @@ const Signup = () => {
                             {errors.email?.type === 'pattern' && <span className='text-red-500'>{errors.email.message}</span>}
                         </label>
                     </div>
-
-
                     <div>
                         <input className='signup-input' type='password'
                             placeholder=' Password' autoComplete="off"
@@ -119,16 +105,12 @@ const Signup = () => {
                             {errors.password?.type === 'minLength' && <span className='text-red-500'>{errors.password.message}</span>}
                         </label>
                     </div>
-
                     {signInError}
                     <input type='submit' className='signup-input input-submit' value='SingUp' />
-
                 </form>
-
                 <div className='signup-or mb-2 mt-2'>
                     <hr /> <p className='ml-1 mr-1' style={{ color: 'blue' }}>OR</p> <hr />
                 </div>
-
                 <div>
                     <div>
                         <div className='socialLogin'>
@@ -142,12 +124,10 @@ const Signup = () => {
                         </div>
                     </div>
                 </div>
-
                 <div className='new-user mt-4'>
                     <p style={{ textAlign: 'center' }}>Alrady have an account? <Link to='/login' style={{ textDecoration: 'none' }}><span>Login</span></Link>
                     </p>
                 </div>
-
             </div>
         </div>
     );
