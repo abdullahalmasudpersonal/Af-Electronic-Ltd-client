@@ -10,7 +10,7 @@ const ManageAllOrders = () => {
 /*     const handleDelete = id => {
         const porceed = window.confirm('Are you sure?');
         if (porceed) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://agile-reaches-45369.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

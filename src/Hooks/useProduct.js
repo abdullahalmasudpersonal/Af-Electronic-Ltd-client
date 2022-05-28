@@ -4,7 +4,7 @@ const usePorudcts = () => {
     const [products, setPorudcts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://agile-reaches-45369.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setPorudcts(data));
     }, []);

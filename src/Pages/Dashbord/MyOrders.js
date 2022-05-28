@@ -10,7 +10,7 @@ const MyOrders = () => {
 
         const getOrders = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/order?email=${email}`;
+            const url = `https://agile-reaches-45369.herokuapp.com/order?email=${email}`;
             const { data } = await axios.get(url);
             setOrders(data);
         }
@@ -20,7 +20,7 @@ const MyOrders = () => {
     const deleteMyOrder = id => {
         const porceed = window.confirm('Are you sure?');
         if(porceed){
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://agile-reaches-45369.herokuapp.com/order/${id}`;
             fetch(url,{
                 method: 'DELETE'
             })

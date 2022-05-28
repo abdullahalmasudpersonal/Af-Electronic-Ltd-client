@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading/Loading';
 import AdminRow from './AdminRow';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://agile-reaches-45369.herokuapp.com/user', {
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
