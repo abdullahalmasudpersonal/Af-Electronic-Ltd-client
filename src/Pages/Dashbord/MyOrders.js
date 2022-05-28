@@ -15,19 +15,50 @@ const MyOrders = () => {
             setOrders(data);
         }
         getOrders();
+    }, [user]);
 
-    }, [user])
+    const deleteMyOrder = id => {
+        const porceed = window.confirm('Are you sure?');
+        if(porceed){
+            const url = `http://localhost:5000/order/${id}`;
+            fetch(url,{
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+        }
+    }
+
+
     return (
         <div className='ml-6'>
-            <h2>My Orders</h2>
+            <h2 className='mb-5'>My Orders</h2>
             <div>
-                <h1>Your Orders: {orders.length}</h1>
-                {
-                    orders.map(order => <div
-                        key={order._id}>
-                        {/* <p>{order.email} : {order.name}</p> */}
-                    </div>)
-                }
+                <h1 className='mb-5'>Your Orders: {orders.length}</h1>
+                <div class="overflow-x-auto">
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Product Name</th>
+                                <th>Manage</th>
+                                <th>Payment</th>
+                            </tr>
+                        </thead>
+                        {
+                            orders.map(order => <tbody key={order._id}>
+                                <th>{user.displayName}</th>
+                                <th>{order.product}</th>
+                                
+                                <th><button onClick={() => deleteMyOrder(order._id)} className='btn btn-xs  btn-outline btn-error'>Delete</button></th>
+
+                                <th><button className='btn btn-xs  btn-outline btn-primary'>Pay</button></th>
+                            </tbody>)
+                        }
+                    </table>
+                </div>
             </div>
         </div>
     );

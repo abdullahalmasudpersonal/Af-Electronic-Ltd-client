@@ -25,6 +25,7 @@ const ProductDetail = () => {
     const handlePlaceOrder = event => {
         event.preventDefault();
         const order = {
+            name: user.name,
             email: user.email,
             product: product.name,
             productId: productId,
@@ -35,7 +36,7 @@ const ProductDetail = () => {
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
-              /*   toast('Your order is compleate!!!'); */
+                    toast.success('Your order is placed !!!');
                     event.target.reset();
                 }
             })
@@ -45,7 +46,7 @@ const ProductDetail = () => {
         <div className='productDetail'>
             <div className='porductDetail-dev'>
                 <form onSubmit={handlePlaceOrder}>
-                    <input type="text" name='userName' class="input input-bordered input-md w-full max-w-xs mb-3" value={user?.displayName} readOnly disabled />
+                    <input type="text" name='uName' class="input input-bordered input-md w-full max-w-xs mb-3" value={user?.displayName} readOnly disabled />
                     <br />
                     <input type="email" name='email' class="input input-bordered input-md w-full max-w-xs mb-3" value={user?.email} readOnly disabled />
                     <br />
@@ -60,10 +61,6 @@ const ProductDetail = () => {
                     <input type="submit" value='Add Product' class="input input-bordered input-md w-full max-w-xs font-bold cursor-pointer bg-purple-200 hover:bg-purple-400 " />
                 </form>
             </div>
-
-            {/*           <Link to={`/checkout/${productId}`}>
-                <button>Purchase Now</button>
-            </Link>  */}
         </div>
     );
 };

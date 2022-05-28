@@ -13,7 +13,7 @@ const Products = () => {
 
     return (
         <div className='products'>
-            <h1></h1>
+            <h1>{/* none */}</h1>
             <div className='products-dev'>
                 {
                     homeProducts.map(homeProduct => <Product
