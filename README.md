@@ -28,7 +28,7 @@ This is an electronics product Manufacturers website. Various types of electroni
  - Axios
  - Reactfirebase hooks
 
-#### client Side
+#### Server Side
  - Express
  - Cors 
  - Mongodb
