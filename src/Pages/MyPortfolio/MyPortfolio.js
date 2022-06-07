@@ -83,9 +83,13 @@ const MyPortfolio = () => {
                     </ul>
                 </div>
 
-                <div>
-                    <a href="https://google.com" target="_blank" >Computer Warehouse</a><br/>
+                <div className='mt-8 text-center font-bold text-purple-700'>
 
+                    <a className=' mt-5 btn btn-outline btn-primary ' href="https://fstoppers.web.app/" target="_blank" >Fstoppers</a><br/>
+
+                    <a className=' mt-5 btn btn-outline btn-primary ' href="https://abdullahalmasud-laptop-reviews.netlify.app/" target="_blank" >Laptop Review</a><br/>
+
+                    <a className='mt-5 btn btn-outline btn-primary' href="https://computer-warehouse-5a411.web.app/" target="_blank" >Computer Warehouse</a><br/>
                 </div>
 
             </div>
